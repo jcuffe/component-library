@@ -1,0 +1,138 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,600,700);
+
+.Header__Container {
+  position: relative;
+  height: 110px;
+  background-color: #445a6b;
+  display: flex;
+  align-items: center;
+  padding: 0 20px 0 20px;
+
+  .Header__LinkContainer_Nav {
+    margin-left: auto;
+  }
+
+  .Header__LinkContainer_Dropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 101%;
+    right: 0; // Counteract header padding
+    min-width: 250px;
+    background-color: #445a6b;
+    border-radius: 5px;
+    padding: 12px 0;
+    z-index: 1000;
+  }
+}
+
+.Header__Mobile_Container {
+  background-color: #445a6b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px 0 20px;
+
+  .Header__LinkContainer_Nav,
+  .Header__LinkContainer_Dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Header__Link_Nav,
+  .Header__Link_Dropdown {
+    margin: 5px 0;
+  }
+
+  .Header__Link_Nav:last-child {
+    margin: 12px 0;
+  }
+}
+
+.Header__Brand {
+  padding-bottom: 6px; // Revel brand logo has negative space at top of image
+}
+
+.Header__Mobile_Toggle {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.Header__Mobile_Collapse {
+  position: relative; // Absolutely position profile pic within
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.Header__Collapse_Relative {
+  position: relative;
+  width: 100%;
+}
+
+.Header__Collapse_ProfilePic {
+  position: absolute;
+  max-width: 44px;
+  top: 0;
+  right: 20px;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.Header__Mobile_Hamburger {
+  margin-left: auto;
+  background: transparent;
+  outline: none;
+  border: none;
+  padding: 0;
+  img {
+    display: block;
+  }
+}
+
+.Header__Dropdown_Chevron {
+  margin-left: 5px;
+}
+
+.Header__Link_Nav,
+.Header__Link_Dropdown {
+  cursor: pointer;
+  color: white;
+  font-family: Roboto;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 12px 32px;
+  &:hover {
+    color: #e7b5b8;
+  }
+}
+
+.Header__Link_Nav {
+  &:last-child {
+    border: 1px solid white;
+    border-radius: 5px;
+    &:hover {
+      border: 1px solid #e7b5b8;
+    }
+  }
+}
+
+.Header__Dropdown_Container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 20px;
+}
+
+.Header__Dropdown_Image {
+  // object-fit: contain;
+  max-width: 72px;
+  border: 4px solid white;
+  border-radius: 50%;
+}

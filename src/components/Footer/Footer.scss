@@ -1,0 +1,90 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,600,700);
+
+.Footer__Container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #445a6b;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 14px;
+  padding: 50px 5% 50px 15%;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    padding: 6px 0;
+  }
+
+  li,
+  li a {
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    img {
+      margin-right: 10px;
+    }
+  }
+
+  a:hover {
+    color: #e7b5b8;
+  }
+}
+
+.Footer__Sections_Container {
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+  div {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+  }
+}
+
+.Footer__Section_Header {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 14px;
+  margin: 10px 0 5px 0;
+}
+
+.Footer__Icon {
+  height: 16px;
+  width: 16px;
+  padding-bottom: 2px; // SVG<>text alignment
+}
+
+.Footer__Copyright {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 767px) {
+  .Footer__Sections_Container {
+    flex-direction: column;
+    div {
+      width: 100%;
+    }
+  }
+
+  .Footer__Container {
+    padding: 50px 0;
+  }
+
+  .Footer__Container,
+  .Footer__Container ul,
+  .Footer__Sections_Container div {
+    align-items: center;
+  }
+}
